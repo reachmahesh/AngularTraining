@@ -18,18 +18,29 @@ Enter Value:&nbsp;<input type="text" name="txtValue" id="txtValue" #input>
 </ng-template>
 
 <ol *ngIf="people.length>0;else alternatePeople">
-  <header>Displaying names</header>
-  <li *ngFor="let p of people">
+  
+
+    <table border="1"> 
+      <th> Display Names </th>
+      <tr>Name </tr>
+      <td *ngFor="let p of people">
+        <span style="float: right">{{p.salary}}</span> 
+      </td>
+      <tr>Salary </tr>
+      <td *ngFor="let p of people">
+          <span style="float: right">{{p.salary}}</span> 
+        </td>
+    </table>
     <div>
-      <span style="float: left">{{p.name}}</span>
-      <span style="float:right">{{p.salary}}</span>
+      
     </div>
-  </li>
+  
 </ol>
 
 <ng-template #alternatePeople>
   <div>No records</div>
 </ng-template>
+<app-price-list> </app-price-list>
 <!--
    var input = document.createElement('input')
    document.createElement('button').addEventListener('click',(e)=>{
