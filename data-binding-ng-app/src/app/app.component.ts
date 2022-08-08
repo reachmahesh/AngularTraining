@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { peopleRecords } from 'src/repository/peopleRecords';
 
 @Component({
   selector: 'app-root',
@@ -7,13 +6,13 @@ import { peopleRecords } from 'src/repository/peopleRecords';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  marginValue = 30
-  welcomeMessage = 'Welcome to data binding'
-  numbers = []
-  people = peopleRecords
+  // title = 'Product Managment System';
+  // marginValue = 30;
+  // backColor = 'aqua'
 
-  // increaseMargin(e: any, value: string): void { console.log(e)}
-  increaseMargin(value: string): void {
-    this.marginValue += Number(value)
-  }
+  // numbers = [1, 2, 3, 4, 5]
+
+  // changeStyle(colorName: string) {
+  //   this.backColor = colorName
+  // }
 }

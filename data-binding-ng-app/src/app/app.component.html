@@ -1,62 +1,15 @@
-<h2>{{welcomeMessage}}</h2>
-<br />
-Enter Value:&nbsp;<input type="text" name="txtValue" id="txtValue" #input>
-<br>
-<!-- <button (click)="increaseMargin($event, input.value)">Increase margin</button> -->
-<button (click)="increaseMargin(input.value)">Increase margin</button>
-<br>
-<span class="borderStyle" [style.margin-left.px]="marginValue">Margin from left is: {{ marginValue }}</span>
+<!-- <h2 [style.margin.px]="marginValue" [style.background-color]="backColor" (mouseover)="changeStyle('lime')"
+  (mouseout)="changeStyle('aqua')">
+  {{title}}
+</h2>
 
-<br>
-<ul *ngIf="numbers.length>0;else alternateNumbers">
-  <header>Displaying numbers</header>
-  <li *ngFor="let num of numbers">{{ num }}</li>
+<ul *ngIf="numbers.length>0;else alternate">
+  <li *ngFor="let n of numbers">
+    {{n}}
+  </li>
 </ul>
-
-<ng-template #alternateNumbers>
+<ng-template #alternate>
   <div>No values</div>
-</ng-template>
+</ng-template> -->
 
-<ol *ngIf="people.length>0;else alternatePeople">
-  
-
-    <table border="1"> 
-      <th> Display Names </th>
-      <tr>Name </tr>
-      <td *ngFor="let p of people">
-        <span style="float: right">{{p.salary}}</span> 
-      </td>
-      <tr>Salary </tr>
-      <td *ngFor="let p of people">
-          <span style="float: right">{{p.salary}}</span> 
-        </td>
-    </table>
-    <div>
-      
-    </div>
-  
-</ol>
-
-<ng-template #alternatePeople>
-  <div>No records</div>
-</ng-template>
-<app-products> </app-products>
-<!--
-   var input = document.createElement('input')
-   document.createElement('button').addEventListener('click',(e)=>{
-     input.value
-   })
-
-    numbers = [1, 2, 3, 4, 5]
-   var ulObj = document.createElement('ul')
-   for(let i = 0;i<numbers.length;i++){
-    var liEle = document.createElement(li)
-    let num = numbers[i]
-    liEle.setAttribute('text',num.toString())
-    ulObj.appendChild(liEle)
-   }
-
-   for...of
-
-   document.body.appendChild(ulObj)
--->
+<app-product-list></app-product-list>
